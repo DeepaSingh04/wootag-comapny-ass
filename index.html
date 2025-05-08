@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Banner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div class="banner-container">
+        <!-- Question 1 Stage -->
+        <div class="stage" id="question1">
+            <img src="assets/text1.png" alt="Question 1" class="question-text">
+            <div class="map-container">
+                <img src="assets/map.png" alt="Map" class="map">
+                <div class="pin italy" data-correct="true"></div>
+                <div class="pin france" data-correct="false"></div>
+                <div class="pin germany" data-correct="false"></div>
+                <div class="pin spain" data-correct="false"></div>
+            </div>
+        </div>
+
+        <!-- Question 2 Stage -->
+        <div class="stage" id="question2" style="display: none;">
+            <img src="assets/text1.png" alt="Question 2" class="question-text">
+            <div class="map-container">
+                <img src="assets/map.png" alt="Map" class="map">
+                <div class="pin france" data-correct="true"></div>
+                <div class="pin italy" data-correct="false"></div>
+                <div class="pin germany" data-correct="false"></div>
+                <div class="pin spain" data-correct="false"></div>
+            </div>
+        </div>
+
+        <!-- Final Stage -->
+        <div class="stage" id="final" style="display: none;">
+            <video id="finalVideo" muted autoplay loop>
+                <source src="assets/ulajh.mp4" type="video/mp4">
+            </video>
+            <button id="unmuteBtn">Unmute</button>
+        </div>
+
+        <!-- Feedback Overlays -->
+        <div class="feedback correct" style="display: none;">
+            <img src="assets/correct.png" alt="Correct">
+        </div>
+        <div class="feedback incorrect" style="display: none;">
+            <img src="assets/incorrect.png" alt="Incorrect">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
